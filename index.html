@@ -2,46 +2,34 @@
 <html lang="en">
 
 <head>
-    <title></title>
+    <title>sample</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./index.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
 </head>
 
 <body>
 
-    <div class="container">
-
-        <div class="action-list" >
-
-<form name="myForm">
-    <h1>Add to the list.</h1>
-        <label for="form_title">Title:</label>
-        <input  class="form-control" type="text" name="form_title" id="formTitle"/>
-
-        <label for="form_body">Body Text:</label>
-        <input class="form-control" type="text" name="form_body" id="formBody">
-<br>
-        <button class="btn btn-dark" id="subButton">submit</button>
-    </form>
 
 
 
-
-        </div>
-
-        <ol class="list" id="list">
-
-        </ol>
-    </div>
-
-
-
-
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCmqaSNw3v2bgfejB_SmLP2-KkX_P1qwQM",
+            authDomain: "test-c983f.firebaseapp.com",
+            databaseURL: "https://test-c983f.firebaseio.com",
+            projectId: "test-c983f",
+            storageBucket: "test-c983f.appspot.com",
+            messagingSenderId: "120908994117"
+        };
+        firebase.initializeApp(config);
+    </script>
     <script src="./index.js">
     </script>
-
 </body>
 
 </html>

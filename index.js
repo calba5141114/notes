@@ -1,48 +1,20 @@
-//initialize nd binding views to variables
-var deleteButtons = document.getElementsByClassName("delete");
-var editButtons = document.getElementsByClassName("edit");
-var list = document.getElementById("list");
-var actionList = document.getElementById("actionList");
-//gets submit button
-var submit = document.getElementById("subButton");
-var formTitle = document.getElementById('formTitle');
-var formBody = document.getElementById('formBody');
-var notes =[];
-//creating the note data object.
+var provider = new firebase.auth.GoogleAuthProvider();
 
-// var note =  {
-// "title": String,
-// "body":String,
-// "id": Number
-// };
-
-//constructor for note
-function Note(title, body) {
-  this.title = title;
-  this.body = body;
+window.onload = () =>{
+firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
 }
-
-// <li>
-// <h3>this.title</h3>
-// <p>this.body</p>
-//  </li>
-
-// p  =  new Person('first','body');
-
-//basic functions
-function formatNote(note){
- note = '<li>'+'<h3>'+ note.title + '</h3>' + '<p>' + note.body + '</p>' + '</li>';
-}
-
-//onclicks
-
-submit.onclick = () =>{
-    var title = formTitle.value;
-    var body = formBody.value;
-    var note =  new Note (title, body);
-    formatNote(note);
-    notes.push(note);
-    console.log(notes);
-};
-
-
