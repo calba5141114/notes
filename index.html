@@ -12,23 +12,41 @@
 
 <body>
 
+    <div class="container">
+        <h1 class="display-1 text-center">Brick Builder</h1>
+        <p class="text-center">A component building platform</p>
+<br>
+        <div class="container w-50" id="getComp">
+                <div class="form-group">
+                <label for="stuff3">Component Name</label>
+                <input type="text" class="form-control" id="stuff2" placeholder="component class name">
+            </div>
+              
+                <div class="form-group">
+                <label for="stuff1">Component Type</label>
+                <select class="form-control" id="stuff1">
+                        <option>h1</option>
+                        <option>p</option>
+                        <option>div</option>
+                      </select>
+                    </div>
+             
+                <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Content</label>
+                        <textarea class="form-control" id="stuff3" rows="3"></textarea>
+                      </div>
+             
+            <button id="submit" class="btn btn-primary">
+                Submit
+            </button>
+        </div>
 
+    </div>
 
-
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyCmqaSNw3v2bgfejB_SmLP2-KkX_P1qwQM",
-            authDomain: "test-c983f.firebaseapp.com",
-            databaseURL: "https://test-c983f.firebaseio.com",
-            projectId: "test-c983f",
-            storageBucket: "test-c983f.appspot.com",
-            messagingSenderId: "120908994117"
-        };
-        firebase.initializeApp(config);
-    </script>
-    <script src="./index.js">
+    <script src="src/init.js"></script>
+    <script src="src/getData.js"></script>
+    <script src="src/manipData.js"></script>
+    <script src="src/index.js">
     </script>
 </body>
 
