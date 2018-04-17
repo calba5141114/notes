@@ -1,4 +1,3 @@
-
 var getComp = document.getElementById("getComp");
 var submit = document.getElementById("submit");
 var bricksArray = [];
